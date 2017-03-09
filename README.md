@@ -30,10 +30,8 @@ And open [http://localhost:9000](http://localhost:9000)
 
 This project was created following the instructions on [this great tutorial](https://medium.com/@patriciolpezjuri/using-create-react-app-with-react-router-express-js-8fa658bf892d#.34je0jd4l)
 
-Here is [Create React App](https://github.com/facebookincubator/create-react-app) documentation:
 
-
-
+### Original [Create React App](https://github.com/facebookincubator/create-react-app) documentation:
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
