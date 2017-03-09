@@ -27,7 +27,10 @@ node server
 ```
 And open [http://localhost:9000](http://localhost:9000)
 
-[http://localhost:9000/flickr/query](http://localhost:9000/flickr/query) points to an endpoint that will return a JSON object with the Flickr results. For more information on the Flickr API check the [Flickr API documentation](https://www.flickr.com/services/api/), [the flickrapi node module documentation](https://www.npmjs.com/package/flickrapi), [and this page that explains how to build the urls for the images](https://www.flickr.com/services/api/misc.urls.html)
+[http://localhost:9000/flickr/query](http://localhost:9000/flickr/query) points to an endpoint that will return a JSON object with the Flickr results. For more information on the Flickr API check:
+* The [Flickr API documentation](https://www.flickr.com/services/api/)
+* The [flickrapi node module documentation](https://www.npmjs.com/package/flickrapi)
+* And this [page that explains how to build the urls for the images](https://www.flickr.com/services/api/misc.urls.html)
 
 
 This project was created following the instructions on [this great tutorial](https://medium.com/@patriciolpezjuri/using-create-react-app-with-react-router-express-js-8fa658bf892d#.34je0jd4l)
