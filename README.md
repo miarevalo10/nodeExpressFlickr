@@ -1,3 +1,39 @@
+# Node + Express + create-react-app + flickrApi Boilerplate
+
+This is a simple project that helps bootstrap projects that use create-react-app + node + express + flickrapi
+
+To use this boilerplate clone it:
+
+```
+git clone https://github.com/john-guerra/nodeExpressFlickr.git myApp
+cd myApp
+echo "my_flickr_api_key" > server/api_key.txt
+echo "my_flickr_api_secret" > server/api_secret.txt
+npm install
+```
+
+Then compile the front-end into the build folder using
+
+```
+npm run build
+```
+
+And finally run the server
+
+```
+node server
+```
+And open [http://localhost:9000](http://localhost:9000)
+
+
+This project was created following the instructions on [this great tutorial](https://medium.com/@patriciolpezjuri/using-create-react-app-with-react-router-express-js-8fa658bf892d#.34je0jd4l)
+
+Here is [Create React App](https://github.com/facebookincubator/create-react-app) documentation:
+
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
