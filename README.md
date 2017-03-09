@@ -11,6 +11,8 @@ echo "my_flickr_api_key" > server/api_key.txt
 echo "my_flickr_api_secret" > server/api_secret.txt
 npm install
 ```
+You can [get your Flicr api key and secrets here](https://www.flickr.com/services/apps/create/)
+
 
 Then compile the front-end into the build folder using
 
