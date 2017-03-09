@@ -18,12 +18,7 @@ class App extends Component {
         id:'',
         secret:''
       }
-      this.handleGetPhotos = this.handleGetPhotos.bind(this);
 
-    }
-
-    handleGetPhotos(photos){
-      this.setState({'photos': photos});
     }
 
     getPhotos(query)
@@ -32,6 +27,7 @@ class App extends Component {
       .then(response => {
       this.setState({
       photos: response.data
+      console.log(photos);
       })
     })
     }
