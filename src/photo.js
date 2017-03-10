@@ -20,7 +20,7 @@ class Photo extends Component {
   render() {
 
     return(
-      <div>
+      <div className="col-md-12 colphoto">
           <img src={this.getUrl(this.props.photo)} alt=""/>
         {console.log(this.getUrl(this.props.photo))}
 

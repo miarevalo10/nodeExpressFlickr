@@ -7,7 +7,7 @@ class Photos extends Component {
   if(this.props.photos) {
       return(
 
-        <div className="col-md-10">
+        <div className="col-md-12 colphoto">
           {console.log(this.props.photos)}
           {this.props.photos.map((photo) => {
               return <Photo key={photo.id} photo={photo}/>
