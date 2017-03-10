@@ -26,8 +26,7 @@ class App extends Component {
       axios.get('/flickr/'+ query)
       .then(response => {
       this.setState({
-      photos: response.data
-      console.log(photos);
+      photos: response.data.photos.photo
       })
     })
     }
@@ -46,13 +45,8 @@ class App extends Component {
           To get started, edit <code>src/App.js</code> and save to reload.
         </p> */}
         <Buscador getPhotos={this.getPhotos.bind(this)}/>
-        <Photos photo={this.state.photos}/>
+        <Photos photos={this.state.photos}/>
 
-        {/* <Buscador buscarVideoYoutube={this.buscarVideoYoutube.bind(this)} />
-            <div className="row margen">
-              <VideoPlayer className="col-md-8" video={<this className="state "></this>selectedVideo}/>
-              <Sugerencias className="col-md-4" videos={this.state.videos} ponerVideo={(video) => {this.setState({selectedVideo: video})}} />
-            </div> */}
       </div>
     );
   }
