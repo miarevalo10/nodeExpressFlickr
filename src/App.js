@@ -11,24 +11,83 @@ class App extends Component {
   constructor(props) {
       super(props);
 
+
       this.state = {
-        photos: [],
-        farm:'',
-        server:'',
-        id:'',
-        secret:''
+
+          blue:[],
+          yellow:[],
+          red:[],
+          orange:[],
+          green:[],
+          purple:[],
+          pink:[]
+
       }
+
 
     }
 
     getPhotos(query)
     {
-      axios.get('/flickr/'+ query)
-      .then(response => {
-      this.setState({
-      photos: response.data.photos.photo
-      })
-    })
+
+
+        // console.log("GET " + query +"  "+ c);
+        axios.get('/flickr/'+ query + ' blue')
+          .then(response => {
+            this.setState({
+            blue: response.data.photos.photo
+            })
+            console.log(this.state);
+          })
+
+          axios.get('/flickr/'+ query + ' yellow')
+            .then(response => {
+              this.setState({
+              yellow: response.data.photos.photo
+              })
+              console.log(this.state);
+            })
+
+           axios.get('/flickr/'+ query + ' red')
+                        .then(response => {
+                          this.setState({
+                          red: response.data.photos.photo
+                          })
+                          console.log(this.state);
+                        })
+
+            axios.get('/flickr/'+ query + ' green')
+                .then(response => {
+                          this.setState({
+                          green: response.data.photos.photo
+                                      })
+                                      console.log(this.state);
+                                    })
+                                    axios.get('/flickr/'+ query + ' orange')
+                                        .then(response => {
+                                                  this.setState({
+                                                  orange: response.data.photos.photo
+                                                              })
+                                                              console.log(this.state);
+                      })
+            axios.get('/flickr/'+ query + ' purple')
+                  .then(response => {
+                  this.setState({
+                 purple: response.data.photos.photo
+                        })
+                console.log(this.state);
+                  })
+
+            axios.get('/flickr/'+ query + ' pink')
+                  .then(response => {
+                 this.setState({
+                 pink: response.data.photos.photo
+                  })
+                  console.log(this.state);
+                 })
+
+
+
     }
 
 
@@ -36,18 +95,54 @@ class App extends Component {
 
   render() {
     return (
+      <div>
       <div className="App">
-        {/* <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
+        <div className="">
+          <h2>Flickr Rainbown</h2>
         </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p> */}
-        <Buscador getPhotos={this.getPhotos.bind(this)}/>
-        <Photos photos={this.state.photos}/>
-
+        <div className="row">
+          <Buscador getPhotos={this.getPhotos.bind(this)}/>
+        </div>
       </div>
+      <div className="row">
+        <div className="col-md-2">
+
+        </div>
+        <div className="col-md-1">
+          <Photos photos={this.state.blue}/>
+
+        </div>
+        <div className="col-md-1">
+          <Photos photos={this.state.yellow}/>
+
+        </div>
+        <div className="col-md-1">
+          <Photos photos={this.state.red}/>
+
+        </div>
+        <div className="col-md-1">
+          <Photos photos={this.state.orange}/>
+
+        </div>
+        <div className="col-md-1">
+          <Photos photos={this.state.green}/>
+
+        </div>
+        <div className="col-md-1">
+          <Photos photos={this.state.purple}/>
+
+        </div>
+        <div className="col-md-1">
+          <Photos photos={this.state.pink}/>
+
+        </div>
+      </div>
+      </div>
+
+
+
+
+
     );
   }
 }
