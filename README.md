@@ -1,6 +1,13 @@
 # Flick Rainbow
 
 
+Para correr el proyecto instale las dependencias
+
+```
+npm install
+```
+
+Copie su llave de Flickr ??????
 
 Para compilar el proyecto primero usar
 
